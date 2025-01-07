@@ -1,0 +1,68 @@
+/* Import the Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Chakra+Petch:wght@300;400;500;600&display=swap");
+
+/* Chemistry-specific styles */
+:root {
+  --sl-hue-accent: 220; /* Blue-based theme */
+  --sl-color-accent-low: hsl(var(--sl-hue-accent), 50%, 96%);
+  --sl-color-accent: hsl(var(--sl-hue-accent), 72%, 55%);
+  --sl-color-accent-high: hsl(var(--sl-hue-accent), 100%, 14%);
+  --font-heading: "Orbitron", sans-serif;
+  --font-body: "Chakra Petch", sans-serif;
+}
+
+/* Dark theme adjustments */
+:root[data-theme="dark"] {
+  --sl-color-accent-low: hsl(var(--sl-hue-accent), 60%, 14%);
+  --sl-color-accent: hsl(var(--sl-hue-accent), 72%, 65%);
+  --sl-color-accent-high: hsl(var(--sl-hue-accent), 90%, 90%);
+}
+
+/* Enhanced code blocks for chemical equations */
+.chemical-equation {
+  font-family: "Monaco", "Courier New", monospace;
+  background-color: var(--sl-color-gray-6);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* Improved table styles for periodic tables and data */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border: 1px solid var(--sl-color-gray-5);
+}
+
+/* Responsive design improvements */
+@media (max-width: 50rem) {
+  .chemical-equation {
+    font-size: 0.9em;
+    padding: 0.75rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* Apply to headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* Apply to body text */
+body {
+  font-family: var(--font-body);
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+    <!-- Hexagonal structure -->
+    <g transform="translate(120,120)" fill="none" stroke="currentColor" stroke-width="4">
+        <!-- Hexagon -->
+        <path d="M0,-60 L52,-30 L52,30 L0,60 L-52,30 L-52,-30 Z" />
+
+        <!-- Double bonds -->
+        <path d="M0,-60 L52,-30" stroke-width="8" />
+        <path d="M52,30 L0,60" stroke-width="8" />
+        <path d="M-52,-30 L-52,30" stroke-width="8" />
+
+        <!-- Carbon atoms -->
+        <circle cx="0" cy="-60" r="8" fill="currentColor" />
+        <circle cx="52" cy="-30" r="8" fill="currentColor" />
+        <circle cx="52" cy="30" r="8" fill="currentColor" />
+        <circle cx="0" cy="60" r="8" fill="currentColor" />
+        <circle cx="-52" cy="30" r="8" fill="currentColor" />
+        <circle cx="-52" cy="-30" r="8" fill="currentColor" />
+    </g>
+</svg>

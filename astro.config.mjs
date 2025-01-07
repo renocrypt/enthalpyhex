@@ -6,22 +6,29 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'EnthalpyHex',
+			description: 'Advanced Chemistry Documentation and Resources',
+			defaultLocale: 'en',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/your-username/EnthalpyHex',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Getting Started',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Introduction', slug: 'introduction' },
+						{ label: 'About', slug: 'about' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Physical Chemistry',
+					items: [
+						{ label: 'Thermodynamics', slug: 'physical/thermodynamics' },
+					],
 				},
+			],
+			customCss: [
+				'./src/styles/custom.css',
 			],
 		}),
 	],
