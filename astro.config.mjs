@@ -22,9 +22,11 @@ export default defineConfig({
 				},
 				{
 					label: 'Physical Chemistry',
-					items: [
-						{ label: 'Thermodynamics', slug: 'physical/thermodynamics' },
-					],
+					autogenerate: { directory: 'physical' }
+				},
+				{
+					label: 'Quantum Chemistry',
+					autogenerate: { directory: 'quantum' }
 				},
 			],
 			customCss: [
