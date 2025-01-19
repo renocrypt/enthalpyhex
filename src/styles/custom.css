@@ -1,5 +1,5 @@
 /* Import the Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap");
 
 /* Chemistry-specific styles */
 :root {
@@ -7,8 +7,8 @@
   --sl-color-accent-low: hsl(var(--sl-hue-accent), 50%, 96%);
   --sl-color-accent: hsl(var(--sl-hue-accent), 72%, 55%);
   --sl-color-accent-high: hsl(var(--sl-hue-accent), 100%, 14%);
-  --font-heading: "Orbitron", sans-serif;
-  --font-body: "Nunito", sans-serif;
+  --font-heading: "Josefin Sans", sans-serif;
+  --font-body: "Open Sans", sans-serif;
 }
 
 /* Dark theme adjustments */
@@ -42,8 +42,8 @@ td {
 /* Responsive design improvements */
 @media (max-width: 50rem) {
   .chemical-equation {
-    -size: 0.9em;
-    padding: 0.75rem;
+    -size: 1em;
+    padding: 0.95rem;
   }
 
   table {
