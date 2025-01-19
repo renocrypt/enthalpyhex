@@ -1,7 +1,7 @@
-/* Import the Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap");
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap");
 
-/* Chemistry-specific styles */
+/* Theme Variables */
 :root {
   --sl-hue-accent: 220; /* Blue-based theme */
   --sl-color-accent-low: hsl(var(--sl-hue-accent), 50%, 96%);
@@ -18,7 +18,76 @@
   --sl-color-accent-high: hsl(var(--sl-hue-accent), 90%, 90%);
 }
 
-/* Enhanced code blocks for chemical equations */
+/* Base Typography */
+body {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700 !important;
+}
+
+h1 {
+  font-size: 3.5rem !important;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.75rem !important;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 2rem !important;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.5rem !important;
+  line-height: 1.4;
+}
+
+/* Text Elements */
+li,
+p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+strong,
+b {
+  font-weight: 700 !important;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/* Hero Section */
+[data-page-type="splash"] h1 {
+  font-size: 4.5rem !important;
+  letter-spacing: -0.03em;
+}
+
+[data-page-type="splash"] .hero-text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Chemical Equation Styles */
 .chemical-equation {
   font-family: "Monaco", "Courier New", monospace;
   background-color: var(--sl-color-gray-6);
@@ -27,7 +96,7 @@
   margin: 1rem 0;
 }
 
-/* Improved table styles for periodic tables and data */
+/* Table Styles */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -39,10 +108,10 @@ td {
   border: 1px solid var(--sl-color-gray-5);
 }
 
-/* Responsive design improvements */
+/* Responsive Adjustments */
 @media (max-width: 50rem) {
   .chemical-equation {
-    -size: 1em;
+    font-size: 1em;
     padding: 0.95rem;
   }
 
@@ -52,17 +121,11 @@ td {
   }
 }
 
-/* Apply to headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
+/* Hero Image Dark Mode Adaptation */
+[data-page-type="splash"] .hero img {
+  filter: var(--sl-color-accent-high);
 }
 
-/* Apply to body text */
-body {
-  font-family: var(--font-body);
+[data-theme="dark"] [data-page-type="splash"] .hero img {
+  filter: brightness(0) saturate(100%) invert(80%);
 }
